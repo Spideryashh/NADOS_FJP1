@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Backtracking</title>
+    <link rel = "icon" href = "images/icon.png" type = "image/x-icon">
+</head>
+
+<body>
+    <h1>Backtracking is Live</h1>
+
+    <p>Copyright &copy;2002 by David Matuszek</p>
+
+    <p>Backtracking is a form of recursion.</p>
+    <p>
+        The usual <em>scenario</em> is that you are faced with a number of options, and you
+        must choose one of these.<br> After you make your choice you will get a new set
+        of options; just what set of options you get depends on what choice you made.
+        This <strong>procedure</strong> is repeated over and over until you reach a final state.<br> If you
+        made a good <b>sequence</b> of choices, your final state is a <i>goal state;</i> if
+        you didn't, it isn't.
+    </p>
+    <hr>
+    <p>
+        Conceptually, you start<sub>go</sub> at the root of a tree; the tree probably has some good
+        leaves and some<sup>30</sup> bad leaves, though it may be that the leaves are all good or
+        all bad.<br> You want to get to a good leaf. At each node, beginning with the root,
+        you choose one of its <ins>hello</ins> children to move to, and you keep this up until you get
+        to a <del>plant</del> leaf.
+    </p>
+    <hr>
+    <p>
+        Suppose you get to a bad leaf. You can backtrack to continue the search
+        for a good leaf by revoking your most recent choice, and trying out the
+        next option in that set of options.<br> If you run out of options, revoke the choice
+        that got you here, and try another choice at that node.<br> If you end up at the
+        root with no options left, there are no good leaves to be found.
+    </p>
+    <hr>
+    <p>This needs an example.</p>
+    <!-- absolute path mai pura image address copy paste krtai hai relative mai buss relative location specify krtain hai -->
+    <img src="images/tree.gif" />
+
+    <ol>
+        <li>Starting at Root, your options are A and B. You choose A.</li>
+        <li>At A, your options are C and D. You choose C.</li>
+        <li>C is bad. Go back to A.</li>
+        <li>At A, you have already tried C, and it failed. Try D.</li>
+        <li>D is bad. Go back to A.</li>
+        <li>At A, you have no options left to try. Go back to Root.</li>
+        <li>At Root, you have already tried A. Try B.</li>
+        <li>At B, your options are E and F. Try E.</li>
+        <li>E is good. Congratulations!</li>
+    </ol>
+
+    <pre>
+        boolean solve(Node n) {
+            if n is a leaf node {
+                if the leaf is a goal node, return true
+                else return false
+            } else {
+                for each child c of n {
+                    if solve(c) succeeds, return true
+                }
+                return false
+            }
+        }
+    </pre>
+
+    <pre>
+        //pre tag : it prints the code aur text as it is
+        Entering solvable(Root)
+        |  Entering solvable(A)
+        |  |  Entering solvable(C)
+        |  |  |  Entering solvable(null)
+        |  |  |  solvable(null) returns false
+        |  |  |  Entering solvable(null)
+        |  |  |  solvable(null) returns false
+        |  |  solvable(C) returns false
+        |  |  Entering solvable(D)
+        |  |  |  Entering solvable(null)
+        |  |  |  solvable(null) returns false
+        |  |  |  Entering solvable(null)
+        |  |  |  solvable(null) returns false
+        |  |  solvable(D) returns false
+        |  solvable(A) returns false
+        |  Entering solvable(B)
+        |  |  Entering solvable(E)
+        |  |  solvable(E) returns true
+        |  solvable(B) returns true
+        solvable(Root) returns true
+        true
+    </pre>
+    
+    <table border="1px" cellpadding = "10px" cellspacing="10px" align="center">
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>2 by 3 map</th>
+                <th>3 by 3 map</th>
+                <th>3 by 4 map</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr align="center">
+                    <td colspan="2">Method 1:</td>
+                    <td>60 ms</td>
+                    <td>90 ms</td>
+                    <td>100 ms</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Method 2:</td>
+                    <td>100 ms</td>
+                    <td>20 ms</td>
+                    <td>test passed</td>
+                </tr>
+        </tbody>
+    </table>
+
+    <table border="1px">
+        <thead>
+            <tr>
+                <th rowspan="2">Heading 1</th>
+                <th> heading 2</th>
+                <th rowspan="2">Heading 3</th>
+            </tr>
+            <tr>
+                <th>Subhead2</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <br><br>
+    <a href="https://www.google.com/">Google</a>
+    <a href="author.html">Author</a>
+    <a href="https://www.prepbytes.com/">Go To Prepbytes</a>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ul_EM2xL_i4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="100%" height="315" src="https://nados.pepcoding.com/"  allowfullscreen></iframe>
+
+</body>
+</html>

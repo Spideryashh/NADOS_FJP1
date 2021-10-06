@@ -1,3 +1,5 @@
 // npm install library_name
 1.minimist
 2.axios
+3.excel4node
+4.pdflib
