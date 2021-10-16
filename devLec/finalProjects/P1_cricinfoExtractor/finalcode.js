@@ -1,10 +1,12 @@
+//                                                     # WEB-SCRAPPING PROJECT : cricinfoExtractor(worldcup2019)
+
 // node finalcode.js --excel=Worldcup.csv --dataDir=worldcup --source=https://www.espncricinfo.com/series/icc-cricket-world-cup-2019-1144415/match-results
 
-let minimist = require("minimist");
-let axios = require("axios");
-let jsdom = require("jsdom");
-let excel4node = require("excel4node");
-let pdf = require("pdf-lib");
+let minimist = require("minimist"); // input
+let axios = require("axios");  // getting html file          
+let jsdom = require("jsdom");  // to manipulate html file
+let excel4node = require("excel4node"); // for making excel file 
+let pdf = require("pdf-lib");   // for making pdf 
 let fs = require("fs");
 let path = require("path");
 
