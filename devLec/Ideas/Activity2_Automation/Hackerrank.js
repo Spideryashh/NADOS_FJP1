@@ -21,6 +21,7 @@ let tab;
         await tab.type("#input-1", id);
         await tab.type("#input-2", pw);
         await tab.click(".ui-btn.ui-btn-large.ui-btn-primary.auth-button.ui-btn-styled"); // login hojata hai click se
+        
         // await browser.close();
         console.log("browser closed");
 })();
