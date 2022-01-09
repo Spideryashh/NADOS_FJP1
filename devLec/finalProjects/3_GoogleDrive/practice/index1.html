@@ -1,0 +1,42 @@
+<html>
+
+    <head>
+        <title>Frontend project</title>
+        <link rel="stylesheet" href="style1.css">
+    </head>
+
+    <body>
+        <div id="header">
+            <!-- buttons etc -->
+            <h1>this is header</h1>
+            <button id="addFolder">Add Folder</button>
+            <button id="addTextFile">Add Text File</button>
+        </div>
+
+        <div id="breadcrumb">
+            <!-- locations of file: root parent child -->
+            <h1>this is breadcrumb</h1>
+        </div>
+
+        <div id="container">
+            <!-- to show all files and folder -->
+            <h1>this is container</h1>
+        </div>
+
+        <div id="app">
+            <!-- to show apps below -->
+            <h1>this is area where app will show</h1>
+        </div>
+
+        <template id="templates">
+            <div class="folder" type="folder" rid="" pid="">
+                <span action="rename">rename</span>
+                <span action="delete">delete</span>
+                <span action="view">view</span>
+                <div purpose="name"></div>
+            </div>
+        </template>
+
+        <script src="script1.js" type="text/javascript"></script>
+    </body>
+</html>

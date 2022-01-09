@@ -1,7 +1,7 @@
 //                                                     # WEB-SCRAPPING PROJECT : cricinfoExtractor(worldcup2019)
 
 // node finalcode.js --excel=Worldcup.csv --dataDir=worldcup --source=https://www.espncricinfo.com/series/icc-cricket-world-cup-2019-1144415/match-results
-
+// node finalcode.js --excel=Worldcup.csv --dataDir=worldcup --source=https://www.espncricinfo.com/series/icc-men-s-t20-world-cup-2021-22-1267897/match-results
 let minimist = require("minimist"); // input
 let axios = require("axios");  // getting html file          
 let jsdom = require("jsdom");  // to manipulate html file
