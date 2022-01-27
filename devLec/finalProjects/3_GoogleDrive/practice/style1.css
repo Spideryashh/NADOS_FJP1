@@ -15,7 +15,13 @@
 #breadcrumb {
     border: 1px solid black;
     margin: 10px;
+    display: flex;
+}
+
+#breadcrumb a {
+    background-color: tomato;
     padding: 10px;
+
 }
 
 #app{
