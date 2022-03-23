@@ -82,7 +82,15 @@
     }
 
     function viewFolder(){
-        console.log("in view");
+        let spanView = this;
+        let divFolder = spanView.parentNode;
+        let divName = divFolder.querySelector("[purpose='name");
+
+        let fname = divName.innerHTML;
+        let fid = parseInt(divFolder.getAttribute("rid"));
+
+        let aPathTemplate = templates.content.querySelector("a[purpose='path']");
+        let aPath = 
     }
 
     function viewTextFile(){

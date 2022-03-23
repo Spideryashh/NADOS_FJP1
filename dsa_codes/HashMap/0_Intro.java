@@ -30,6 +30,8 @@ public class Main{
             System.out.print(key+" = ");
             System.out.println(pmap.get(key));
         }
+        pmap.remove("China");
+        System.out.println(pmap);
     }
 }
 
@@ -46,3 +48,4 @@ public class Main{
 // Nigeria = 80
 // India = 130
 // Russia = 30
+// {USA=53, Nigeria=80, India=130, Russia=30}

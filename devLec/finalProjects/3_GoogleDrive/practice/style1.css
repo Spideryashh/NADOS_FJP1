@@ -21,7 +21,12 @@
 #breadcrumb a {
     background-color: tomato;
     padding: 10px;
+    border-right: 5px solid black;
+}
 
+#breadcrumb a:hover {
+    background-color: teal;
+    text-decoration: underline;
 }
 
 #app{
